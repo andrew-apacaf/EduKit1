@@ -8,27 +8,52 @@ from gpiozero import LED, Button, Buzzer
 
 
 # Set up variables for the LED, Buzzer and switch pins
+red = LED(18)
+yellow = LED(23)
+green = LED(24)
+button = Button(25)
+buzzer = Buzzer(22)
 
 # Define a function for the initial state (Green LED on, rest off)
 # (If you have the second 'pedestrian LEDs, turn the red on & green
 # off)
 def startgreen():
     # Remember all code in the function is indented
+    green.on()
+    yellow.off()
+    red.off()
+    button.off()
+    buzzer.off()
 
 # Turn the green off and the amber on for 3 seconds
 # ('Pedestrian' red LED stays lit)
 def steadyamber():
     # Remember all code in the function is indented
+    green.off()
+    yellow.on()
+    red.off()
+    button.off()
+    buzzer.off()
+    time.sleep(3)
+    yellow.off()
 
 # Turn the amber off, and then the red on for 1 second
 def steadyred():
     # Remember all code in the function is indented
+    green.off()
+    yellow.off()
+    red.on()
+    button.off()
+    buzzer.off()
+    time.sleep(1)
+    red.off()
 
 # Sound the buzzer for 4 seconds
 # (If you have the 'pedestrian' LEDs, turn the red off and green on)
 def startwalking():
     # Make the buzzer buzz on and off, half a second of
     # sound followed by half a second of silence
+    
 
 # Turn the buzzer off and wait for 2 seconds
 # (If you have a second green 'pedestrian' LED, make it flash on and

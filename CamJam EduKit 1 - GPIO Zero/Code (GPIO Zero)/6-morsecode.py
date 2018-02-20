@@ -3,7 +3,7 @@
 
 # Import Libraries
 import os  # Gives Python access to Linux commands
-import time  # Proves time related commands
+import time  # Provides time related commands
 from gpiozero import Buzzer  # The GPIO Zero buzzer functions
 
 # Set pin 22 as a buzzer
